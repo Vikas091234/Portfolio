@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vikas Raj – Portfolio</title>
+
+  <!-- SEO -->
+  <meta name="description" content="Portfolio of Vikas Raj, IIT Madras Electrical Engineering student."/>
+  <meta name="keywords" content="IIT Madras, Electrical Engineering, web developer, Vikas Raj"/>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- Font-Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Theme toggle -->
+  <button id="theme-toggle" aria-label="Toggle dark mode">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- NAV -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home">
+    <div class="hero-content">
+      <h1>Hi I am Vikas Raj</h1>
+      <p>IIT Madras Electrical Engineering student passionate about clean code and hardware-software co-design.</p>
+    </div>
+  </header>
+
+  <!-- GITHUB PROJECTS -->
+  <section id="projects">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:2rem;">
+      <h2>Projects</h2>
+      <button id="add-proj-btn" class="btn" onclick="toggleAddProjectForm()">Add More Projects</button>
+    </div>
+    <div class="grid" id="repo-grid"><!-- GitHub cards --></div>
+    <div id="add-project-form" class="inline-form" style="display:none">
+      <input id="proj-name"   placeholder="Project name" />
+      <input id="proj-desc"   placeholder="Short description" />
+      <input id="proj-link"   placeholder="URL (optional)" />
+      <button onclick="addProject()">Save Project</button>
+    </div>
+  </section>
+
+  <!-- CERTIFICATES -->
+  <section id="certificates">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:2rem;">
+      <h2>Certificates</h2>
+      <button id="add-cert-btn" class="btn" onclick="toggleAddCertificateForm()">Add Certificate</button>
+    </div>
+    <div class="grid" id="certificates-grid"><!-- certificate cards --></div>
+    <div id="add-certificate-form" class="inline-form" style="display:none">
+      <input id="cert-title"  placeholder="Certificate title" />
+      <input id="cert-link"   placeholder="URL (optional)" />
+      <button onclick="addCertificate()">Save Certificate</button>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      I’m an enthusiastic learner studying Electrical Engineering at IIT Madras.
+      I love exploring web technologies, building small projects, and turning
+      ideas into working code.
+    </p>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p style="text-align:center;font-size:1.1rem;">
+      Feel free to reach me at
+      <a href="mailto:vikasracharla11@smail.iitm.ac.in" class="btn">
+        <i class="fas fa-envelope"></i> vikasracharla11@smail.iitm.ac.in
+      </a>
+    </p>
+  </section>
+
+  <footer>
+    &copy; <span id="year"></span> Vikas Raj – Built with ❤️
+  </footer>
+
+  <!-- Batch bar (select & delete) -->
+  <div id="batch-bar" class="batch-bar">
+    <label><input type="checkbox" id="select-all"> Select All</label>
+    <button onclick="deleteSelected()" class="btn-small btn-danger">Delete Selected</button>
+  </div>
+
+  <script src="document.js"></script>
+</body>
+</html>

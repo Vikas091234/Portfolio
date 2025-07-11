@@ -18,10 +18,16 @@ Live site: [vikas091234.github.io/Portfolio](https://vikas091234.github.io/Portf
 ## 📁 File Structure
 
 Portfolio/
+
 ├── index.html         # Main page
+
 ├── style.css          # Styling
+
 ├── document.js        # Logic (repos, dark-mode, CRUD)
+
 └── README.md          # This file
+
+
 ---
 
 ## 🛠️ Getting Started (self-host)
